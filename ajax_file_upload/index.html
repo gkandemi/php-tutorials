@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="custom.js"></script>
+    <title>Ajax File Upload</title>
+
+    <style>
+        fieldset{
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+<form id="uploadForm" enctype="multipart/form-data">
+
+    <fieldset>
+        <label for="name">Personel Adı</label>
+        <input type="text" name="personel_name" id="name">
+    </fieldset>
+
+    <fieldset>
+        <label for="file">Personel Resmi</label>
+        <input type="file" name="file" id="file">
+    </fieldset>
+
+    <button type="submit">Kaydet</button>
+
+
+</form>
+
+</body>
+</html>

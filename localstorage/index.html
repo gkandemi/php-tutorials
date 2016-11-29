@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+           // localStorage.setItem(key,value)
+           // localStorage.getItem(key)
+
+            var personel_name = localStorage.getItem("personel_name");
+            var personel_last_name = localStorage.getItem("personel_last_name");
+
+            $("#personel_name").val(personel_name);
+            $("#personel_last_name").val(personel_last_name);
+
+            $(".add").click(function () {
+
+                var personel_name = $("#personel_name").val();
+                var personel_last_name = $("#personel_last_name").val();
+
+                localStorage.setItem("personel_name", personel_name);
+                localStorage.setItem("personel_last_name", personel_last_name);
+
+            })
+
+            $("#personel_name").change(function(){
+                localStorage.setItem("personel_name", $(this).val());
+            })
+
+            $("#personel_last_name").change(function(){
+                localStorage.setItem("personel_last_name", $(this).val());
+        })
+
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="personel_name" />
+    <input type="text" id="personel_last_name" />
+    <button class="add">Ekle</button>
+</body>
+</html>
